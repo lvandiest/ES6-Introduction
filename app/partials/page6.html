@@ -1,0 +1,124 @@
+<h3>Arrow functions</h3>
+
+<div class="content-block">
+    <p>
+        Arrow functions provide a new syntax for writing functions. This allows for shorter and cleaner functions.
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions</a>
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        
+        <span>
+            Single parameter
+        </span>
+        <div tabs>
+            <div pane title="ES5">
+                
+<textarea id="arrow1_es5" code-mirror>
+var f = function(param) {
+    console.log(param);
+}
+
+f('foo');</textarea>
+                
+            </div>
+            <div pane title="ES6">
+
+<textarea id="arrow1_es6" code-mirror>
+const f = param => {
+    console.log(param);
+}
+
+f('foo');</textarea>
+
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+        
+        <span>
+            Multiple parameters
+        </span>
+        <div tabs>
+            <div pane title="ES5">
+                
+<textarea id="arrow2_es5" code-mirror>
+var f = function(param1, param2, param3) {
+    console.log('1:', param1,'2:', param2, '3:', param3);
+}
+
+f('foo', 'bar', 'baz');</textarea>
+
+            </div>
+            <div pane title="ES6">
+                
+<textarea id="arrow2_es6" code-mirror>
+const f = (param1, param2, param3) => {
+    console.log('1:', param1,'2:', param2, '3:', param3);
+}
+
+f('foo', 'bar', 'baz');</textarea>
+
+            </div>
+        </div>
+        
+        <div class="spacer"></div>
+        
+        <span>
+            No parameters
+        </span>
+        <div tabs>
+            <div pane title="ES5">
+                
+<textarea id="arrow3_es5" code-mirror>
+var f = function() {
+    console.log('foo');
+}
+
+f();</textarea>
+
+            </div>
+            <div pane title="ES6">
+                
+<textarea id="arrow3_es6" code-mirror>
+const f = () => {
+    console.log('foo');
+}
+
+f();</textarea>
+
+            </div>
+        </div>
+        
+        <div class="spacer"></div>
+        
+        <span>     
+            Return statement
+        </span>
+        <div tabs>
+            <div pane title="ES5">
+                
+<textarea id="arrow4_es5" code-mirror>
+var f = function(a, b) {
+    return a * b;
+}
+
+console.log(f(3,4));</textarea>
+
+            </div>
+            <div pane title="ES6">
+                
+<textarea id="arrow4_es6" code-mirror>
+const f = (a, b) => a*b;
+
+console.log(f(3,4));</textarea>
+
+            </div>
+        </div>
+        
+  </div>
+</div>

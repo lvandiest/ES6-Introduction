@@ -1,0 +1,23 @@
+{
+  "name": "ES6Introduction",
+  "version": "0.1.0",
+  "authors": [
+    "Laurens van Diest <laurensvandiest@gmail.com>"
+  ],
+  "description": "An introduction to ES6",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/lib/",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.x",
+    "jquery": "1.10.2",
+    "codemirror": "~5.15.2",
+    "angular-route": "~1.4.x"
+  }
+}

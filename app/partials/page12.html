@@ -1,0 +1,47 @@
+<h3>Object method definitions</h3>
+
+<div class="content-block">
+    <p>
+        ES6 allows for quicker definitions of methods in objects. 
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Property_definitions">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Property_definitions</a>
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5">
+
+<textarea id="method_es5" code-mirror>var catOwner = {
+   name: 'Laurens',
+   cats: ['Loki', 'Turbo'],
+   showCats: function() {
+      this.cats.forEach(cat => {
+         console.log(this.name + ' has a cat named ' + cat)
+      })
+   }
+}
+catOwner.showCats();</textarea>		
+			
+            </div>
+            <div pane title="ES6">
+
+<textarea id="method_es6" code-mirror>let catOwner = {
+   name: 'Laurens',
+   cats: ['Loki', 'Turbo'],
+   showCats() {
+      this.cats.forEach(cat => {
+         console.log(this.name + ' has a cat named ' + cat)
+      })
+   }
+}
+catOwner.showCats();</textarea>			
+			
+            </div>
+        </div>
+		
+	 </div>
+</div>

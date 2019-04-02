@@ -1,0 +1,59 @@
+<h3>Internationalization and localization</h3>
+
+<div class="content-block">
+    <p>
+        ES6 provides localized formatting for numbers, currency and dates.    
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl</a>
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/format">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/format</a>
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat</a>
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        
+Numbers
+<textarea id="intloc1" code-mirror>
+let usd = new Intl.NumberFormat("en-US");
+let eur = new Intl.NumberFormat("nl-NL");
+
+var number = 12345678.90;
+
+console.log(usd.format(number));
+console.log(eur.format(number));</textarea>
+
+<div class="spacer"></div>
+
+Currency
+<textarea id="intloc2" code-mirror>
+let usd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
+let eur = new Intl.NumberFormat("nl-NL", { style: "currency", currency: "EUR" });
+let yen = new Intl.NumberFormat("ja-JP", { style: "currency", currency: "JPY" });
+
+
+var amount = 12345678.90;
+
+console.log(usd.format(amount));
+console.log(eur.format(amount));
+console.log(yen.format(amount));</textarea>
+
+<div class="spacer"></div>
+
+Dates
+<textarea id="intloc3" code-mirror>
+var us = new Intl.DateTimeFormat("en-US");
+var nl = new Intl.DateTimeFormat("nl-NL");
+
+var date = new Date();
+
+console.log(us.format(date));
+console.log(nl.format(date));</textarea>
+
+    </div>
+</div>

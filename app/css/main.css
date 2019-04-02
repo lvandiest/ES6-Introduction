@@ -1,0 +1,90 @@
+body {
+  background: #f9fbff;
+}
+
+.container.main {
+    margin-top: 32px;
+}
+
+.main-content {
+}
+
+.nav-controls {
+  margin: 0 0 25px 0;
+}
+
+.content-partial {
+  min-height: 400px;
+}
+
+.content-block {
+  margin: 0 0 50px 0;  
+}
+
+h2, h3 {
+  color: #a5c249!important;
+  margin: 30px 0;
+}
+
+h4, h5, h6 {
+  color: #ffffff!important;
+}
+
+ul.list {
+  list-style: none; /* Remove default bullets */
+}
+
+ul.list li::before {
+  content: "◾";
+  color: #a5c249;
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -1em;
+}
+
+  .panel-body, .panel-body h3, .panel-body h4, .panel-body h5, .panel-body h6 {
+    color: #333333!important;
+  }
+  
+  .panel-body .nav-tabs > li.active > a,
+  .panel-body .nav-tabs > li.active > a:hover,
+  .panel-body .nav-tabs > li.active > a:focus {
+    background-color: #fff;
+  }
+  
+  .panel-body .nav-tabs {
+    margin-bottom: 10px;
+  }
+
+.spacer {
+  margin: 50px 0 0 0;
+}
+
+.page {
+  display: inline-block;
+}
+
+.page.previous {
+  text-align: left;
+}
+
+.page.index {
+  text-align: center;
+}
+
+.page.next {
+  text-align: right;
+}
+
+
+/*=================================*/
+/* codeMirror directive */
+
+.CodeMirror {
+  height: auto;
+}
+
+.code-editor {
+}
+

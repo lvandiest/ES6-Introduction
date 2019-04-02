@@ -1,0 +1,54 @@
+<h3>Rest parameters</h3>
+
+<div class="content-block">
+    <p>
+        ES6 also allows you to store trailing arguments in an array.
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters</a>
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5">
+
+<textarea id="parameters_es5" code-mirror>
+var describeFruit = function() {
+    
+    var fruit = arguments[0];
+    var fruitProperties = '';
+
+    if (arguments[1]) fruitProperties += arguments[1];
+    if (arguments[2]) fruitProperties += ' ' + arguments[2];
+    if (arguments[3]) fruitProperties += ' ' + arguments[3];
+
+    console.log('I have a ' + fruitProperties + ' ' + fruit + '!');
+
+}
+
+describeFruit('apple', 'sweet red');
+describeFruit('lemon', 'sour');
+describeFruit('pear', 'big', 'juicy', 'green');</textarea>		
+			
+            </div>
+            <div pane title="ES6">
+
+<textarea id="parameters_es6" code-mirror>
+var describeFruit = (fruit, ...fruitProperties) => {
+    
+    console.log('I have a ' + fruitProperties.join(' ') + ' ' + fruit + '!');
+
+}
+
+describeFruit('apple', 'sweet red');
+describeFruit('lemon', 'sour');
+describeFruit('pear', 'big', 'juicy', 'green');</textarea>			
+			
+            </div>
+        </div>
+		
+	 </div>
+</div>

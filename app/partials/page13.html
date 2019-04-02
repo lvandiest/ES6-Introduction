@@ -1,0 +1,58 @@
+<h3>Computed property names</h3>
+
+<div class="content-block">
+    <p>
+        ES6 allows for property names to be computed during the definition of an object.
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Property_definitions">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Property_definitions</a>
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5">
+
+<textarea id="computed_es5" code-mirror>let count = 0;
+
+let paramId = function() {
+    count++;
+    return count;
+}
+
+let obj = {
+    id: 123
+}
+
+obj['param' + paramId()] = 'A'
+obj['param' + paramId()] = 'B'
+obj['param' + paramId()] = 'C'
+
+console.log(obj);</textarea>		
+			
+            </div>
+            <div pane title="ES6">
+
+<textarea id="computed_es6" code-mirror>let count = 0;
+
+let paramId = function() {
+    count++;
+    return count;
+}
+
+let obj = {
+    id: 123,
+  	['param' + paramId()]: 'A',
+  	['param' + paramId()]: 'B',
+  	['param' + paramId()]: 'C'
+}
+
+console.log(obj);</textarea>			
+			
+            </div>
+        </div>
+		
+	 </div>
+</div>

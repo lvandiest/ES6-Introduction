@@ -1,0 +1,48 @@
+<h3>Arrow functions</h3>
+
+<div class="content-block">
+    <p>
+        This function looks much better as an arrow function.
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5">
+
+<textarea id="arrow_es5" code-mirror>
+var cats = [
+        {name: 'Loki', age: 3, breed: 'siamese', color: 'lilac point'},
+        {name: 'Turbo', age: 3, breed: 'oriental shorthair', color: 'ebony'},
+        {name: 'Lara', age: 8, breed: 'burmilla', color: 'silver smoked'},
+    ];
+
+var getBreeds = function() {
+    return cats.map(function(cat) {
+        return cat.breed;
+    })
+}
+
+console.log(getBreeds());</textarea>
+
+            </div>
+            <div pane title="ES6">
+
+<textarea id="arrow_es6" code-mirror>
+const cats = [
+        {name: 'Loki', age: 3, breed: 'siamese', color: 'lilac point'},
+        {name: 'Turbo', age: 3, breed: 'oriental shorthair', color: 'ebony'},
+        {name: 'Lara', age: 8, breed: 'burmilla', color: 'silver smoked'},
+    ];
+
+const getBreeds = () => cats.map(cat => cat.breed);
+
+console.log(getBreeds());</textarea>
+
+            </div>
+        </div>
+		
+	 </div>
+</div>

@@ -1,0 +1,67 @@
+<h3>Promises</h3>
+
+<div class="content-block">
+    <p>
+        The <code>Promise</code> object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise</a>
+    </p>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5">
+
+<textarea id="array_es5" code-mirror>
+
+var myPromise = function(success, fail) {
+  setTimeout(function() {
+    var q = Math.floor(Math.random() * 100);
+    if (q <= 50) {
+        success(q);
+    } else {
+        fail(q);
+    }
+  }, 1000);
+}
+
+console.log('Hold on just a second...');
+
+myPromise(function(q) {
+    console.log(q + ' is lower than or equal to 50!')
+}, function(q) {
+    console.log(q + ' is higher than 50!')
+});</textarea>		
+			
+            </div>
+            <div pane title="ES6">
+
+<textarea id="array_es6" code-mirror>
+const myPromise = new Promise( (resolve, reject) => {
+  setTimeout(() => {
+    const q = Math.floor(Math.random() * 100);
+    if (q <= 50) {
+        resolve(q);
+    } else {
+        reject(q);
+    }
+  }, 1000);
+});
+
+console.log(`Hold on just a second...`);
+
+myPromise.then( q => {
+    console.log(`${q} is lower than or equal to 50!`)
+},  q => {
+    console.log(`${q} is higher than 50!`)
+});</textarea>		
+			
+            </div>
+        </div>
+		
+	 </div>
+</div>

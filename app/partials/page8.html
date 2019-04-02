@@ -1,0 +1,49 @@
+<h3>Arrow functions</h3>
+
+<div class="content-block">
+    <p>
+        A regular function defines it's own <code>this</code>. An arrow function inherits <code>this</code> from the surrounding function.
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5">
+
+<textarea id="arrow_es5" code-mirror>
+var catOwner = {
+   name: 'Laurens',
+   cats: ['Loki', 'Turbo'],
+   showCats: function() {
+      var that = this;
+      this.cats.forEach(function(cat) {
+         console.log(that.name + ' has a cat named ' + cat)
+      })
+   }
+}
+
+catOwner.showCats();</textarea>			
+			
+            </div>
+            <div pane title="ES6">
+
+<textarea id="arrow_es6" code-mirror>
+const catOwner = {
+   name: 'Laurens',
+   cats: ['Loki', 'Turbo'],
+   showCats: function() {
+      this.cats.forEach(cat => {
+         console.log(this.name + ' has a cat named ' + cat)
+      })
+   }
+}
+
+catOwner.showCats();</textarea>			
+			
+            </div>
+        </div>
+		
+	 </div>
+</div>

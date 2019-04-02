@@ -1,0 +1,181 @@
+<h3>Arrays</h3>
+
+<div class="content-block">
+    <p>
+        ES6 also adds a very useful method for finding specific items in arrays.
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find</a>
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES51">
+
+Finding the first matching item in an array
+<textarea id="array_es5_1" code-mirror>
+var fruit = ['Apple', 'Pomegranate', 'Pear', 'Dragonfruit'];
+
+var findFruit = function(fruitName) {
+  for (let i=0; i<fruit.length; i++) {
+    if (fruit[i] === fruitName) return fruit[i];
+  }
+}
+
+console.log(findFruit('Pomegranate'));</textarea>		
+			
+            </div>
+            <div pane title="ES52">
+
+Finding the first matching item in an array
+<textarea id="array_es5_2" code-mirror>
+var fruit = ['Apple', 'Pomegranate', 'Pear', 'Dragonfruit'];
+
+var findFruit = function(fruitName) {
+  var n;
+  fruit.forEach(function (name) {
+    if (name === fruitName) n = name;
+  });
+  return n;
+}
+
+console.log(findFruit('Pomegranate'));</textarea>		
+			
+            </div>
+            <div pane title="ES6">
+Finding the first matching item in an array
+<textarea id="array_es6" code-mirror>
+const fruit = ['Apple', 'Pomegranate', 'Pear', 'Dragonfruit'];
+
+const findFruit = (name) => fruit.find(fruitName => fruitName === name);
+
+console.log(findFruit('Pomegranate'));</textarea>		
+			
+            </div>
+        </div>
+		
+	 </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5 1">
+
+Returning the index of the found item
+<textarea id="array2_es5_1" code-mirror>
+var fruit = ['Apple', 'Pomegranate', 'Pear', 'Dragonfruit'];
+
+var getFruitIndex = function(fruitName) {
+  for (let i=0; i<fruit.length; i++) {
+    if (fruit[i] === fruitName) return i;
+  }
+}
+
+console.log(getFruitIndex('Dragonfruit'));</textarea>		
+			
+            </div>
+            <div pane title="ES5 2">
+
+Returning the index of the found item
+<textarea id="array2_es5_2" code-mirror>
+var fruit = ['Apple', 'Pomegranate', 'Pear', 'Dragonfruit'];
+
+var getFruitIndex = function(fruitName) {
+  var i;
+  fruit.forEach(function (name, index) {
+  	if (name === fruitName) i = index;
+  });
+  return i;
+}
+
+console.log(getFruitIndex('Dragonfruit'));</textarea>		
+			
+            </div>
+            <div pane title="ES6">
+
+Returning the index of the found item
+<textarea id="array2_es6" code-mirror>
+const fruit = ['Apple', 'Pomegranate', 'Pear', 'Dragonfruit'];
+
+const getFruitIndex = (name) => fruit.findIndex(fruitName => fruitName === name);
+
+console.log(getFruitIndex('Dragonfruit'));</textarea>		
+			
+            </div>
+        </div>
+		
+	 </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5 1">
+
+Finding the first item with a certain property value in an object
+<textarea id="array3_es5_1" code-mirror>
+var cats = [
+    {name: 'Loki',  age: 3, breed: 'siamese',               color: 'lilac point'},
+    {name: 'Turbo', age: 3, breed: 'oriental shorthair',    color: 'ebony'},
+    {name: 'Lara',  age: 8, breed: 'burmilla',              color: 'silver smoked'},
+];
+
+var findCatByBreed = function(breed) {
+  for (let i=0; i<cats.length; i++) {
+    if (cats[i].breed === breed) {
+    	return cats[i];
+    	break;
+    }
+  }
+}
+
+console.log(findCatByBreed('siamese'));</textarea>		
+			
+            </div>
+            <div pane title="ES5 2">
+
+Finding the first item with a certain property value in an object
+<textarea id="array3_es5_2" code-mirror>
+var cats = [
+    {name: 'Loki',  age: 3, breed: 'siamese',               color: 'lilac point'},
+    {name: 'Turbo', age: 3, breed: 'oriental shorthair',    color: 'ebony'},
+    {name: 'Lara',  age: 8, breed: 'burmilla',              color: 'silver smoked'},
+];
+
+var findCatByBreed = function(breed) {
+  var c;
+  cats.forEach(function (cat) {
+    if (cat.breed === breed) c = cat;
+  })
+  return c;
+}
+
+console.log(findCatByBreed('siamese'));</textarea>		
+			
+            </div>
+            <div pane title="ES6">
+
+Finding the first item with a certain property value in an object
+<textarea id="array3_es6" code-mirror>
+const cats = [
+    {name: 'Loki',  age: 3, breed: 'siamese',               color: 'lilac point'},
+    {name: 'Turbo', age: 3, breed: 'oriental shorthair',    color: 'ebony'},
+    {name: 'Lara',  age: 8, breed: 'burmilla',              color: 'silver smoked'},
+];
+
+const findCatByBreed = (breed) => cats.find(cat => cat.breed === breed);
+
+console.log(findCatByBreed('siamese'));</textarea>		
+			
+            </div>
+        </div>
+		
+	 </div>
+</div>

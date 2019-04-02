@@ -1,0 +1,50 @@
+<h3>Variables - const</h3>
+
+<div class="content-block">
+    <p>
+        <code>const</code> provides a way to set a read only variable. The value has to be set when the constant is declared.
+        When the value is an object or an array it's properties van still be changed.
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const</a>    
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+<textarea id="const1" code-mirror>
+const num = 7;
+const arr = [1,2,3];
+const obj = {a: 1, b: 2};
+
+num = 8;
+arr = [4,5,6];
+obj = {c: 3, d: 4};</textarea>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+<textarea id="const2" code-mirror>
+const fruit = ['Apple', 'Pear', 'Pineapple', 'Pomegranate']
+
+fruit[1] = 'Strawberry';
+
+console.log(fruit);
+</textarea>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+<textarea id="const3" code-mirror>
+const fruit = {
+    name: 'Grape',
+    color: 'Purple'
+}
+
+fruit.color = 'Green';
+
+console.log(fruit);</textarea>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<h3>Block-scoped functions</h3>
+
+<div class="content-block">
+    <p>
+        ES6 provides a cleaner method to create block scoped functions.
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5">
+
+<textarea id="block-scoped_es5" code-mirror>
+(function(){
+
+    function f() {
+        return 1;
+    }
+    
+    console.log(f());
+    
+    (function(){
+
+        function f() {
+            return 2;
+        }
+        
+        console.log(f());
+
+    })();
+    
+    console.log(f());
+
+})();</textarea>			
+			
+            </div>
+            <div pane title="ES6">
+
+<textarea id="block-scoped_es6" code-mirror>
+{
+
+    function f() {
+        return 1;
+    }
+    
+    console.log(f());
+    
+    {
+
+        function f() {
+            return 2;
+        }
+        
+        console.log(f());
+
+    }
+    
+    console.log(f());
+
+}</textarea>			
+			
+            </div>
+        </div>
+		
+	 </div>
+</div>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>An introduction to ES6</title>
+    
+    <!-- import codemirror -->
+    <script src="lib/codemirror/lib/codemirror.js"></script>
+    <script src="lib/codemirror/mode/javascript/javascript.js"></script>
+    <script src="lib/codemirror/addon/display/autorefresh.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/codemirror/lib/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="lib/codemirror/theme/material.css" />
+    
+    <!-- import Angular -->
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    
+    <!-- import jQuery -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    
+    <!-- import bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css" />
+    
+    <!-- import project files -->
+    <script src="js/app.module.js"></script>
+    <script src="js/directives/codeMirrorEditor.directive.js"></script>    
+    <script src="js/directives/tabs.directive.js"></script>    
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    
+</head>
+<body>
+    
+    <div class="container main" ng-app="Es6App">
+        
+        <div ng-view class="main-content"></div>
+        
+    </div>
+
+</body>
+</html>

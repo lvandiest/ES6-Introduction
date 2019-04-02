@@ -1,0 +1,88 @@
+<h3>Template literals</h3>
+
+<div class="content-block">
+    <p>
+        Template literals provide a clean way to interpolate strings.
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals</a>
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5">
+
+<textarea id="stringlit1_es5" code-mirror>
+var cat = {name: 'Turbo', age: 3, breed: 'oriental shorthair', color: 'ebony'};
+
+var catInfo = function() {
+    console.log(cat.name + ' is a ' + cat.age + ' year old ' + cat.color + ' ' + cat.breed + '.');
+}
+
+catInfo();</textarea>
+			
+            </div>
+            <div pane title="ES6">
+
+<textarea id="stringlit1_es6" code-mirror>
+const cat = {name: 'Turbo', age: 3, breed: 'oriental shorthair', color: 'ebony'};
+
+const catInfo = () => {
+    console.log(`${cat.name} is a ${cat.age} year old ${cat.color} ${cat.breed}.`);
+}
+
+catInfo();</textarea>		
+			
+            </div>
+        </div>
+        
+        <div class="spacer"></div>
+    
+        <div tabs>
+            <div pane title="ES5">
+
+<textarea id="stringlit2_es5" code-mirror>
+var foo = 'bar';
+var html = '<div>\n' +
+           '    <span>' + foo + '</span>\n' +
+           '    <ul>\n' +
+           '        <li>a</li>\n' +
+           '        <li>b</li>\n' +
+           '        <li>c</li>\n' +
+           '    </ul>\n' +
+           '</div>' 
+
+console.log(html);
+$('#example').html(html);</textarea>
+			
+            </div>
+            <div pane title="ES6">
+
+<textarea id="stringlit2_es6" code-mirror>
+const foo = `bar`;
+const html = 
+`
+<div>
+    <span>${foo}</span>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+</div>
+`;
+
+console.log(html);
+$('#example').html(html);</textarea>			
+			
+            </div>
+        </div>
+        
+        <h3>Result</h3>
+        <div id="example"></div>
+		
+	 </div>
+</div>

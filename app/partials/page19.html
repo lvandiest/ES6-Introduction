@@ -1,0 +1,72 @@
+<h3>Classes</h3>
+
+<div class="content-block">
+    <p>
+        ES6 also allows the use of classes. 
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes</a>
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+<textarea id="module1" code-mirror>
+class Cat {
+
+   constructor(name, color) {
+      this.name = name;
+      this.color = color;
+   }
+   
+   getName() {
+      return this.name;
+   }
+   
+   getColor() {
+      return this.color;
+   }
+   
+}
+
+class Siamese extends Cat {
+
+   constructor(name, color) {
+      super(name, color);
+      this.breed = 'siamese'
+   }
+   
+   getBreed() {
+   		return this.breed;
+   }
+   
+   info() {
+   		return `${super.getName()} is a ${super.getColor()} siamese!`;
+   }
+   
+}
+
+class Oriental extends Cat {
+
+   constructor(name, color) {
+      super(name, color);
+      this.breed = 'oriental shorthair'
+   }
+   
+   getBreed() {
+   		return this.breed;
+   }
+   
+}
+
+let loki = new Siamese('Loki', 'lilac point');
+let turbo = new Oriental('Turbo', 'ebony');
+
+console.log(loki.getName(), loki.getColor(), loki.getBreed());
+console.log(turbo.getName(), turbo.getColor(), turbo.getBreed());
+
+console.log(loki.info()); </textarea>
+
+    </div>
+</div>
+    

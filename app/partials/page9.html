@@ -1,0 +1,40 @@
+<h3>Default parameters</h3>
+
+<div class="content-block">
+    <p>
+        ES6 allows you to define default values for function arguments.
+    </p>
+    <p> 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters</a>
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5">
+
+<textarea id="parameters_es5" code-mirror>
+var powerOf = function(num, power) {
+	power = !power ? 2 : power;
+	return Math.pow(num, power);
+}
+
+console.log(powerOf(2));
+console.log(powerOf(2, 4));</textarea>
+			
+            </div>
+            <div pane title="ES6">
+
+<textarea id="parameters_es6" code-mirror>
+let powerOf = (num, power = 2) => Math.pow(num, power);
+
+console.log(powerOf(2));
+console.log(powerOf(2, 4));</textarea>			
+			
+            </div>
+        </div>
+		
+	 </div>
+</div>

@@ -1,0 +1,55 @@
+<h3>Strings</h3>
+
+<div class="content-block">
+    <p>
+        ES6 provides a few handy new methods for strings.
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith</a>
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes</a>
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith</a>
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">		
+	
+		<div tabs>
+            <div pane title="ES5">
+
+<textarea id="strings_es5" code-mirror>
+var str = 'This is a fancy string!';
+
+// Starts with
+console.log(str.indexOf('This') === 0);
+
+// Contains
+console.log(str.indexOf('fancy') > -1);
+
+// Ends with
+console.log(str.indexOf('string!') === str.length - 'string!'.length);</textarea>
+			
+            </div>
+            <div pane title="ES6">
+
+<textarea id="strings_es6" code-mirror>
+var str = 'This is a fancy string!';
+
+// Starts with
+console.log(str.startsWith('This'));
+
+// Contains
+console.log(str.includes('fancy'));
+
+// Ends with
+console.log(str.endsWith('string!'));</textarea>			
+			
+            </div>
+        </div>
+		
+	 </div>
+</div>

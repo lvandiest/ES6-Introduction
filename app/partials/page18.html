@@ -1,0 +1,58 @@
+<h3>Modules</h3>
+
+<div class="content-block">
+    <p>
+        ES6 provides a native solution for the creation, export, and import of modules.    
+    </p>
+    <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules">https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules</a>
+    </p>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+lib/dateutils.js
+<textarea id="module1" code-mirror show-run-button="false">
+export function formatDate(input) {
+    const d = input.getDate().toString();
+    d = d.length === 1 ? '0' + d : d;
+    const m = (input.getMonth() + 1).toString();
+    m = m.length === 1 ? '0' + m : m;
+    const y = input.getFullYear();
+    return d + '-' + m + '-' + y;
+};
+
+export function tomorrow() {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    return formatDate(tomorrow);
+};
+
+export function yesterday() {
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    return formatDate(yesterday);
+};</textarea>
+
+<div class="spacer"></div>
+
+main.js
+<textarea id="module2" code-mirror show-run-button="false">
+import {formatDate, tomorrow, yesterday} from "lib/dateutils";
+
+console.log('Tomorrow is ' + formatDate(new Date()));
+console.log('Yesterday was ' + yesterday());
+console.log('Tomorrow is' + tomorrow());</textarea>
+
+<div class="spacer"></div>
+
+main.js
+<textarea id="module3" code-mirror show-run-button="false">
+import * as dateutils from "lib/dateutils";
+
+console.log('Tomorrow is ' + dateutils.formatDate(new Date()));
+console.log('Yesterday was ' + dateutils.yesterday());
+console.log('Tomorrow is' + dateutils.tomorrow());</textarea>
+
+    </div>
+</div>
